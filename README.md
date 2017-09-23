@@ -21,6 +21,16 @@ roles:[
 mongod --dbpath /data/db --logpath /data/db/mongo.log -- fork ---auditDestination syslog
 ```
 
+### 3 Built-in roles
+Roles:
+- Database User: read readWrite  
+- Database Admin: dbAdmin userAdmin dbOwner
+- All Database: readAnyDatabase readWriteDatabase userAdminAnyDatabase dbAdminAnyDatabase
+- Cluster Admin: clusterManager clusterMonitor hostManager clusterAdmin
+- Backup/Restore: backup restore
+- Superuser: dbOwner userAdmin userAdminAnyDatabase root
+- Internal ```__system```
+
 
 
 
