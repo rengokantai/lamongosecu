@@ -25,6 +25,7 @@ mongod --dbpath /data/db --logpath /data/db/mongo.log -- fork ---auditDestinatio
 
 
 ### Enabling auditAuthorizationSuccess
+config.yaml
 ```
 systemLog:
   destination: file
@@ -35,4 +36,22 @@ auditLog:
   destination: file
   format: JSON
   path: /data/db/auditLog.json
+setParameter: { auditAuthorizationSuccess: true }
 ```
+```
+mongod --config config.yaml --fork
+```
+test
+```
+use dbname
+db.coll.insert({})
+```
+
+### Security checklists
+```
+bind_ip
+```
+```
+mongod --noscripting
+```
+
