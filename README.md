@@ -29,7 +29,19 @@ Roles:
 - Cluster Admin: clusterManager clusterMonitor hostManager clusterAdmin
 - Backup/Restore: backup restore
 - Superuser: dbOwner userAdmin userAdminAnyDatabase root
-- Internal ```__system```
+- Internal ```__system```  
+
+
+
+
+
+### 4 User-defined roles
+
+### 9 List user roles and privileges
+```
+db.auth('user','pass');
+```
+
 
 
 
